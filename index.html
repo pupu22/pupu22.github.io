@@ -160,7 +160,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -192,6 +192,157 @@
       
 
       
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/28/echarts/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="GC">
+      <meta itemprop="description" content="从头开始">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/28/echarts/" class="post-title-link" itemprop="url">echarts</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-10-28 09:54:00" itemprop="dateCreated datePublished" datetime="2020-10-28T09:54:00+08:00">2020-10-28</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/27/echarts%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="GC">
+      <meta itemprop="description" content="从头开始">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/27/echarts%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" class="post-title-link" itemprop="url">echarts问题解决</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-10-27 18:32:24" itemprop="dateCreated datePublished" datetime="2020-10-27T18:32:24+08:00">2020-10-27</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-10-28 09:57:59" itemprop="dateModified" datetime="2020-10-28T09:57:59+08:00">2020-10-28</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>今天产品姐姐给我看了前端页面的一个小的问题，就是<strong>页面显示图表的时候x轴的内容没办法显示完全</strong>，希望我能解决一下。我去看了看代码，发现是图表是用echarts实现的，所以就简单学习一下echarts。</p>
+<h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><h5 id="xAxis-axisLabel属性"><a href="#xAxis-axisLabel属性" class="headerlink" title="xAxis.axisLabel属性"></a>xAxis.axisLabel属性</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">axisLabel: &#123;  </span><br><span class="line">   interval:0,  </span><br><span class="line">   rotate:40  </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>interval  表示  <strong>坐标轴刻度标签的显示间隔</strong>，默认会将部分文字隐藏，所以上面的问题就是由于这个属性导致的。</li>
+<li>rotate  指标签倾斜的角度，在类目轴的类目标签显示不全时可以通过<strong>旋转</strong>防止标签重叠（官方这样说的）旋转的角度是-90到90度</li>
+</ol>
+<blockquote>
+<p>参考资料：</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/superlover_/article/details/79714823?utm_medium=distribute.pc_relevant.none-task-blog-title-2&spm=1001.2101.3001.4242">echarts x轴标签文字过多导致显示不全</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#title">echarts配置项手册</a></p>
+</li>
+</ul>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
     
 
 
