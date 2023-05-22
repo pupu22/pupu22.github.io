@@ -7,7 +7,7 @@ http://example.com/categories/index.html
 http://example.com/2023/05/05/hello-world/
 http://example.com/
 http://example.com/tags/React/
-http://example.com/tags/JavaScript/
 http://example.com/tags/HTML/
 http://example.com/tags/CSS/
+http://example.com/tags/JavaScript/
 http://example.com/categories/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/
