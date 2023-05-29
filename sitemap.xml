@@ -65,13 +65,6 @@
 
   
   <url>
-    <loc>http://example.com/tags/React/</loc>
-    <lastmod>2023-05-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/tags/HTML/</loc>
     <lastmod>2023-05-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -80,6 +73,13 @@
   
   <url>
     <loc>http://example.com/tags/CSS/</loc>
+    <lastmod>2023-05-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/React/</loc>
     <lastmod>2023-05-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
